@@ -16,10 +16,12 @@ This tool automates JavaScript recon by pulling historical JS files from the **W
 ## 📸 Screenshots
 
 ### 🔐 Secret Scanning (API Keys & Tokens)
-![Secrets Tab](screenshots/secret_scan.png)  
+<img width="831" height="688" alt="image" src="https://github.com/user-attachments/assets/e1cd19a4-adda-4441-b2ef-926e77c37b64" />
+
 
 ### 🔎 Endpoint Discovery (Recon)
-![Endpoints Tab](screenshots/endpoint_scan.png)  
+<img width="831" height="688" alt="image" src="https://github.com/user-attachments/assets/a30fd2b4-2113-4191-ae2d-38207084f2b0" />
+ 
 
 ---
 
