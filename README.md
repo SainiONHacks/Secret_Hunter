@@ -45,12 +45,13 @@ cd Secret_Hunter
 
 ### Install
 ```bash
-pip install -r requirements.txt
+Exe and linux
 ```
 
 ### Run
 ```bash
-python main.py
+Windows
+Linux
 ```
 
 ---
@@ -92,11 +93,4 @@ You are responsible for legal usage.
 
 YouTube: https://www.youtube.com/@SainiONHacks
 
-<script 
-  src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-  data-name="bmc-button"
-  data-slug="nitinsainir"
-  data-color="#FFDD00"
-  data-font="Cookie"
-  data-text="Buy me a coffee">
-</script>
+<a href="https://www.buymeacoffee.com/nitinsainir"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nitinsainir&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
