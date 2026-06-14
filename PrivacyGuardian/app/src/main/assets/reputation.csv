@@ -1,0 +1,8 @@
+# Privacy Guardian bundled reputation list (offline-first, Phase 6).
+# kind,value,category,risk   (kind = package|domain; risk 0-100)
+# Replace/extend from a maintained feed; bump DB version on change.
+package,com.example.knownspyware,Spyware,95
+package,com.shady.loanapp,Predatory loan,85
+domain,api.quickcash-collect.in,Data exfiltration,80
+domain,analytics.adtrack.io,Aggressive tracking,55
+domain,c2.malware-host.example,Command and control,98
