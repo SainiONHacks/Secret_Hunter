@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      QUERY_ALL_PACKAGES is a Google Play *restricted* permission. It is the ONLY
+      sensitive permission this app declares. Play Console "Permissions declaration"
+      justification: security/antivirus app whose core, user-facing function is
+      analysing the permissions and trackers of installed apps. This is an approved
+      use case. The scanner degrades gracefully if the declaration is rejected
+      (on API 30+ it then only sees packages visible to it) — see ScannerEngine.
+    -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <!-- Standard runtime permission for the background-scan change alerts. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!--
+      NOTE: No INTERNET permission in the Play build. This edition is fully offline:
+      GeoIP and reputation are bundled, and nothing leaves the device. Network
+      monitoring (VpnService) lives ONLY in the 'full' flavor manifest overlay,
+      because its packet forwarder is not production-ready and an incomplete VPN
+      would break connectivity — which would violate Play's "functions as described"
+      requirement. It is therefore excluded from the submittable build.
+    -->
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PrivacyGuardian"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PrivacyGuardian">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>

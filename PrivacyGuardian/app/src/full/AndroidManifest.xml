@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      'full' flavor only — a sideload/testing build. These capabilities are NOT in
+      the Play submission until they are production-ready and separately declared:
+        - INTERNET: for the opt-in hybrid reputation/threat-intel update.
+        - VpnService: Phase 2 network monitoring (packet forwarder still in progress).
+        - WRITE_CONTACTS: the optional contact-canary feature.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <application>
+        <service
+            android:name=".network.PrivacyVpnService"
+            android:exported="false"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

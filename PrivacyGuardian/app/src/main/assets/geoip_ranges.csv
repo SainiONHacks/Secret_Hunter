@@ -1,0 +1,8 @@
+# Privacy Guardian sample GeoIP ranges (IPv4). Format:
+# start_ip_long,end_ip_long,country_code,city,org
+# Replace with a full DB-IP Lite / IP2Location Lite export for production.
+1729568256,1729569279,IN,Mumbai,Hostinger
+872415232,889192447,US,Ashburn,Amazon AWS
+2398289920,2398355455,US,Mountain View,Google
+1347420160,1347420415,US,San Francisco,Cloudflare
+1078018048,1078018303,IN,Bengaluru,Google
